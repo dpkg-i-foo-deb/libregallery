@@ -1,7 +1,11 @@
 package com.github.libregallery
 
+import android.Manifest
+import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.github.libregallery.fragments.AlbumsFragment
 import com.github.libregallery.fragments.TimelineFragment
@@ -24,6 +28,8 @@ class MainActivity : AppCompatActivity()
 
         initializeValues()
 
+        requestPermissions()
+
         setListeners()
     }
 
@@ -32,6 +38,24 @@ class MainActivity : AppCompatActivity()
             val transaction = supportFragmentManager.beginTransaction()
             transaction.replace(R.id.fragment_container,fragment)
             transaction.commit()
+    }
+
+    private fun initializeValues()
+    {
+        navigationBar= findViewById(R.id.bottom_navigation_bar)
+    }
+
+    private fun requestPermissions()
+    {
+        if(ContextCompat.checkSelfPermission
+                (this@MainActivity, Manifest.permission.READ_EXTERNAL_STORAGE)
+                !=
+                PackageManager.PERMISSION_GRANTED)
+        {
+            ActivityCompat.requestPermissions(this@MainActivity,
+                arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE),101)
+        }
+
     }
 
     private fun setListeners()
@@ -45,8 +69,5 @@ class MainActivity : AppCompatActivity()
         }
     }
 
-    private fun initializeValues()
-    {
-        navigationBar= findViewById(R.id.bottom_navigation_bar)
-    }
+
 }
