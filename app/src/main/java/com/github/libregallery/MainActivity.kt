@@ -12,9 +12,7 @@ class MainActivity : AppCompatActivity()
     private val timelineFragment = TimelineFragment()
     private val albumsFragment = AlbumsFragment()
 
-    private val navigationBar: BottomNavigationView by lazy {
-        findViewById(R.id.bottom_navigation_bar)
-    }
+    private var navigationBar: BottomNavigationView?=null
 
     override fun onCreate(savedInstanceState: Bundle?)
     {
@@ -23,6 +21,8 @@ class MainActivity : AppCompatActivity()
         setContentView(R.layout.activity_main)
 
         replaceFragment(timelineFragment)
+
+        initializeValues()
 
         setListeners()
     }
@@ -36,13 +36,17 @@ class MainActivity : AppCompatActivity()
 
     private fun setListeners()
     {
-        navigationBar.setOnItemSelectedListener { item ->
-            when(item.itemId)
-            {
+        navigationBar?.setOnItemSelectedListener { item ->
+            when(item.itemId) {
                 R.id.timeline_item -> replaceFragment(timelineFragment)
                 R.id.albums_item -> replaceFragment(albumsFragment)
             }
             true
         }
+    }
+
+    private fun initializeValues()
+    {
+        navigationBar= findViewById(R.id.bottom_navigation_bar)
     }
 }
