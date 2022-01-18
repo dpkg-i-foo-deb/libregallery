@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/timeline_item"
+        android:icon="@drawable/timeline_icon"
+        android:title="@string/timeline_item" />
+    <item
+        android:id="@+id/albums_item"
+        android:icon="@drawable/albums_icon"
+        android:title="@string/albums_item" />
+</menu>

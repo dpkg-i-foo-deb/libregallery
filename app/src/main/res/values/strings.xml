@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Gallery</string>
+    <string name="timeline_item">Timeline</string>
+    <string name="albums_item">Albums</string>
+</resources>
