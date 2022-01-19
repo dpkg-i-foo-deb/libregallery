@@ -9,6 +9,9 @@ This app does not aim to be ultra useful or beautiful or to be the most feature 
 What it can do at the moment:
 
 ✓ Showing pictures and gifs from the media store or basically the pictures directory
+
 ✓ Viewing the picture you select in fullscreen
+
 ✓ Autoplaying GIF
+
 ✓ Sorting by date descendant
