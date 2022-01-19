@@ -48,7 +48,7 @@ class TimelineFragment : Fragment()
 
         allPictures=ArrayList()
 
-        imageRecycler?.layoutManager=GridLayoutManager(activity,3)
+        imageRecycler?.layoutManager=GridLayoutManager(activity,4)
         imageRecycler?.setHasFixedSize(true)
     }
 

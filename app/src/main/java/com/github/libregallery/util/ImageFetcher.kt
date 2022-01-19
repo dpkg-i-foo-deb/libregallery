@@ -17,9 +17,9 @@ class ImageFetcher {
     {
         val allUri = MediaStore.Images.Media.EXTERNAL_CONTENT_URI
 
-        val projection = arrayOf(MediaStore.Images.ImageColumns.DATA,MediaStore.Images.Media.DATA)
+        val projection = arrayOf(MediaStore.MediaColumns.DATA,MediaStore.Images.Media.BUCKET_DISPLAY_NAME)
 
-        val cursor = context?.contentResolver?.query(allUri,projection,null,null,null)
+        val cursor = context?.contentResolver?.query(allUri,projection,null,null, null)
 
         var path : String
 
