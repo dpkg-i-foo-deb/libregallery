@@ -5,12 +5,26 @@ import android.provider.MediaStore
 import com.github.libregallery.model.Picture
 import kotlin.Exception
 
-class ImageFetcher {
+class ImageFetcher
+{
+
     private var allImages: ArrayList<Picture>? = null
+    private var sortByDateDesc : String ?= null
 
     init
     {
+        initializeVariables()
+        createSortOrders()
+    }
+
+    private fun initializeVariables()
+    {
         allImages = ArrayList()
+    }
+
+    private fun createSortOrders()
+    {
+        sortByDateDesc = MediaStore.Images.Media.DATE_TAKEN + " DESC"
     }
 
     fun getAllImages(context: Context?) : ArrayList<Picture>?
@@ -19,7 +33,7 @@ class ImageFetcher {
 
         val projection = arrayOf(MediaStore.MediaColumns.DATA,MediaStore.Images.Media.BUCKET_DISPLAY_NAME)
 
-        val cursor = context?.contentResolver?.query(allUri,projection,null,null, null)
+        val cursor = context?.contentResolver?.query(allUri,projection,null,null, sortByDateDesc)
 
         var path : String
 
