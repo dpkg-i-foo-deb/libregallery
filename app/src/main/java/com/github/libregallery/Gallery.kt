@@ -8,7 +8,7 @@ class Gallery : Application()
     override fun onCreate()
     {
         super.onCreate()
-        // Apply dynamic color
+        // Apply dynamic colour
         DynamicColors.applyToActivitiesIfAvailable(this)
     }
 
