@@ -11,7 +11,7 @@ import com.github.libregallery.fragments.AlbumsFragment
 import com.github.libregallery.fragments.TimelineFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class MainActivity : AppCompatActivity()
+class GalleryActivity : AppCompatActivity()
 {
     private val timelineFragment = TimelineFragment()
     private val albumsFragment = AlbumsFragment()
@@ -48,11 +48,11 @@ class MainActivity : AppCompatActivity()
     private fun requestPermissions()
     {
         if(ContextCompat.checkSelfPermission
-                (this@MainActivity, Manifest.permission.READ_EXTERNAL_STORAGE)
+                (this@GalleryActivity, Manifest.permission.READ_EXTERNAL_STORAGE)
                 !=
                 PackageManager.PERMISSION_GRANTED)
         {
-            ActivityCompat.requestPermissions(this@MainActivity,
+            ActivityCompat.requestPermissions(this@GalleryActivity,
                 arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE),101)
         }
 

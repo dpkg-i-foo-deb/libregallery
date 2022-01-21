@@ -3,7 +3,7 @@ package com.github.libregallery
 import android.app.Application
 import com.google.android.material.color.DynamicColors
 
-class Gallery : Application()
+class GalleryApp : Application()
 {
     override fun onCreate()
     {
