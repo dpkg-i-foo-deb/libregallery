@@ -9,7 +9,7 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import com.github.libregallery.ImageFullActivity
+import com.github.libregallery.activities.ImageFullActivity
 import com.github.libregallery.R
 import com.github.libregallery.model.Picture
 
@@ -45,7 +45,7 @@ class ImageAdapter(private var context: Context?, private var picturesList: Arra
 
         holder.image?.setOnClickListener{
 
-            val intent = Intent(context,ImageFullActivity::class.java)
+            val intent = Intent(context, ImageFullActivity::class.java)
             intent.putExtra("path",currentPicture.getPath())
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             context!!.startActivity(intent)

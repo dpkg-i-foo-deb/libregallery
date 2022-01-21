@@ -1,4 +1,4 @@
-package com.github.libregallery
+package com.github.libregallery.activities
 
 import android.Manifest
 import android.content.pm.PackageManager
@@ -7,6 +7,7 @@ import android.os.Bundle
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import com.github.libregallery.R
 import com.github.libregallery.fragments.AlbumsFragment
 import com.github.libregallery.fragments.TimelineFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView

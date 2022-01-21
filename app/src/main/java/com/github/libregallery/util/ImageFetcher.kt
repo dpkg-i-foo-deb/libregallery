@@ -24,7 +24,7 @@ class ImageFetcher
 
     private fun createSortOrders()
     {
-        sortByDateDesc = MediaStore.Images.Media.DATE_TAKEN + " DESC"
+        sortByDateDesc = MediaStore.Images.Media.DATE_ADDED + " DESC"
     }
 
     fun getAllImages(context: Context?) : ArrayList<Picture>?

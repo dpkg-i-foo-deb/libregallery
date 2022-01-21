@@ -1,8 +1,9 @@
-package com.github.libregallery
+package com.github.libregallery.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.bumptech.glide.Glide
+import com.github.libregallery.R
 
 class ImageFullActivity : AppCompatActivity()
 {

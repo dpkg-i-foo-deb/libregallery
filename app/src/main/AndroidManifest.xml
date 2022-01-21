@@ -14,10 +14,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Gallery">
         <activity
-            android:name=".ImageFullActivity"
+            android:name=".activities.ImageFullActivity"
             android:exported="false" />
         <activity
-            android:name=".GalleryActivity"
+            android:name=".activities.GalleryActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
