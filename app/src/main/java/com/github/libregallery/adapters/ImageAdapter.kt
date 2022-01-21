@@ -1,4 +1,4 @@
-package com.github.libregallery.util
+package com.github.libregallery.adapters
 
 import android.content.Context
 import android.content.Intent

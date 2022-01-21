@@ -8,9 +8,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.github.libregallery.R
-import com.github.libregallery.util.ImageFetcher
+import com.github.libregallery.model.Gallery
 import com.github.libregallery.model.Picture
-import com.github.libregallery.util.ImageAdapter
+import com.github.libregallery.adapters.ImageAdapter
 
 class TimelineFragment : Fragment()
 {
@@ -19,7 +19,7 @@ class TimelineFragment : Fragment()
 
     private var allPictures : ArrayList<Picture> ?=null
 
-    private var fetcher : ImageFetcher?=null
+    private var gallery = Gallery
 
 
     override fun onCreateView(
@@ -38,27 +38,31 @@ class TimelineFragment : Fragment()
 
         getPictures()
 
+        setImageRecycler()
+
     }
 
     private fun initializeVariables()
     {
         imageRecycler= view?.findViewById(R.id.image_recycler)
 
-        fetcher = ImageFetcher()
-
         allPictures=ArrayList()
 
-        imageRecycler?.layoutManager=GridLayoutManager(activity,4)
-        imageRecycler?.setHasFixedSize(true)
     }
 
     private fun getPictures()
     {
         if(allPictures!!.isEmpty())
         {
-            allPictures = fetcher!!.getAllImages(this.context)
+            allPictures = gallery.getAllImages(this.context)
         }
 
         imageRecycler?.adapter = ImageAdapter(activity?.applicationContext,allPictures!!)
+    }
+
+    private fun setImageRecycler()
+    {
+        imageRecycler?.layoutManager=GridLayoutManager(activity,4)
+        imageRecycler?.setHasFixedSize(true)
     }
 }

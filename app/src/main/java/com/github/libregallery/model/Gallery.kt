@@ -1,14 +1,12 @@
-package com.github.libregallery.util
+package com.github.libregallery.model
 
 import android.content.Context
 import android.provider.MediaStore
-import com.github.libregallery.model.Picture
-import kotlin.Exception
 
-class ImageFetcher
+object Gallery
 {
+    private var pictures : ArrayList<Picture> ?= null
 
-    private var allImages: ArrayList<Picture>? = null
     private var sortByDateDesc : String ?= null
 
     init
@@ -19,7 +17,7 @@ class ImageFetcher
 
     private fun initializeVariables()
     {
-        allImages = ArrayList()
+        pictures = ArrayList()
     }
 
     private fun createSortOrders()
@@ -31,7 +29,7 @@ class ImageFetcher
     {
         val allUri = MediaStore.Images.Media.EXTERNAL_CONTENT_URI
 
-        val projection = arrayOf(MediaStore.MediaColumns.DATA,MediaStore.Images.Media.BUCKET_DISPLAY_NAME)
+        val projection = arrayOf(MediaStore.MediaColumns.DATA, MediaStore.Images.Media.BUCKET_DISPLAY_NAME)
 
         val cursor = context?.contentResolver?.query(allUri,projection,null,null, sortByDateDesc)
 
@@ -49,7 +47,7 @@ class ImageFetcher
 
                 picture= Picture(path)
 
-                allImages?.add(picture)
+                pictures?.add(picture)
 
             } while (cursor.moveToNext())
 
@@ -60,6 +58,6 @@ class ImageFetcher
             e.printStackTrace()
         }
 
-        return allImages
+        return pictures
     }
 }
