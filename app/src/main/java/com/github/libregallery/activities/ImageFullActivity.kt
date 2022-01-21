@@ -12,7 +12,7 @@ class ImageFullActivity : AppCompatActivity()
     override fun onCreate(savedInstanceState: Bundle?)
     {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_image_full)
+        setContentView(R.layout.activity_view_image)
 
         initializeValues()
 
