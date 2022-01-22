@@ -12,7 +12,6 @@ class GalleryApp : Application()
         super.onCreate()
         // Apply dynamic colour
         DynamicColors.applyToActivitiesIfAvailable(this)
-
     }
 
 }
