@@ -47,5 +47,6 @@ class PictureFragment (picturePath : String): Fragment()
         Glide.with(this)
                 .load(picturePath)
                 .into(imageView!!)
+
     }
 }

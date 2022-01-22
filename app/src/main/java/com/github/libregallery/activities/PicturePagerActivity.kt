@@ -9,6 +9,7 @@ import com.github.libregallery.adapters.PicturePagerAdapter
 class PicturePagerActivity : AppCompatActivity()
 {
     private var imagePath :String ?=null
+    private var imageIndex :  Int ?= null
     private var adapter : PicturePagerAdapter ?= null
     private var viewPager : ViewPager2 ?= null
 
@@ -27,6 +28,7 @@ class PicturePagerActivity : AppCompatActivity()
     private fun initializeValues()
     {
         imagePath=intent.getStringExtra("path")
+        imageIndex=intent.getIntExtra("index",-1)
         adapter = PicturePagerAdapter(supportFragmentManager,lifecycle)
         viewPager = findViewById(R.id.view_pager)
     }
@@ -34,6 +36,7 @@ class PicturePagerActivity : AppCompatActivity()
     private fun setViewPager()
     {
         viewPager?.adapter = adapter
+        viewPager?.setCurrentItem(imageIndex!!,false)
     }
 
 }
