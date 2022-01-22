@@ -62,7 +62,7 @@ class TimelineFragment : Fragment()
 
     private fun setImageRecycler()
     {
-        imageRecycler?.layoutManager=GridLayoutManager(activity,4)
+        imageRecycler?.layoutManager=GridLayoutManager(activity,3)
         imageRecycler?.setHasFixedSize(true)
     }
 }

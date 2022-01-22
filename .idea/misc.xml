@@ -12,7 +12,7 @@
         <entry key="app/src/main/res/layout/picture_fragment.xml" value="0.1" />
         <entry key="app/src/main/res/layout/row_custom_recycler_item.xml" value="0.19739583333333333" />
         <entry key="app/src/main/res/layout/timeline_fragment.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/timeline_view_image_item.xml" value="0.19739583333333333" />
+        <entry key="app/src/main/res/layout/timeline_view_image_item.xml" value="0.1" />
       </map>
     </option>
   </component>

@@ -7,8 +7,8 @@
     <ImageView
         android:id="@+id/row_image"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_margin="4dp"
+        android:layout_height="160dp"
+        android:layout_margin="1dp"
         android:contentDescription="@string/the_list_of_the_pictures_on_the_phone"
 
         android:src="@mipmap/ic_launcher" />
