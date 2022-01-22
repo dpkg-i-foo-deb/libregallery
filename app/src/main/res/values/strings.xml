@@ -2,6 +2,6 @@
     <string name="app_name">Gallery</string>
     <string name="timeline_item">Timeline</string>
     <string name="albums_item">Albums</string>
-    <string name="the_full_screen_image">The full screen image</string>
     <string name="the_list_of_the_pictures_on_the_phone">the list of the pictures on the phone</string>
+    <string name="this_is_the_picture_displayed">this is the picture displayed</string>
 </resources>

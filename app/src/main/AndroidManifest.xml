@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Gallery">
         <activity
-            android:name=".activities.ImageFullActivity"
+            android:name=".activities.PicturePagerActivity"
             android:exported="false" />
         <activity
             android:name=".activities.GalleryActivity"

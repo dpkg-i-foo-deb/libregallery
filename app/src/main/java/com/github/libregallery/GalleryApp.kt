@@ -1,3 +1,5 @@
+@file:Suppress("unused")
+
 package com.github.libregallery
 
 import android.app.Application
@@ -10,6 +12,7 @@ class GalleryApp : Application()
         super.onCreate()
         // Apply dynamic colour
         DynamicColors.applyToActivitiesIfAvailable(this)
+
     }
 
 }

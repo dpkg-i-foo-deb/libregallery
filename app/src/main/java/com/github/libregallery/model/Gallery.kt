@@ -60,4 +60,15 @@ object Gallery
 
         return pictures
     }
+
+    fun getPicturePath(index : Int) : String?
+    {
+        return pictures?.get(index)?.getPath()
+    }
+
+    fun getPictureCount () : Int?
+    {
+        return pictures?.size
+    }
+
 }

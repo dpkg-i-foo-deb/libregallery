@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import com.github.libregallery.R
 import com.github.libregallery.fragments.AlbumsFragment
 import com.github.libregallery.fragments.TimelineFragment
+
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class GalleryActivity : AppCompatActivity()
@@ -23,6 +24,8 @@ class GalleryActivity : AppCompatActivity()
     {
         super.onCreate(savedInstanceState)
 
+
+
         setContentView(R.layout.activity_main)
 
         replaceFragment(timelineFragment)
@@ -32,6 +35,7 @@ class GalleryActivity : AppCompatActivity()
         requestPermissions()
 
         setListeners()
+
     }
 
     private fun replaceFragment(fragment : Fragment)
