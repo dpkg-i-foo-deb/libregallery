@@ -7,8 +7,9 @@
         <entry key="app/src/main/res/drawable/albums_icon.xml" value="0.21354166666666666" />
         <entry key="app/src/main/res/layout/activity_image_full.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.20697463768115942" />
+        <entry key="app/src/main/res/layout/activity_picture_pager.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_view_image.xml" value="0.18" />
-        <entry key="app/src/main/res/layout/picture_fragment.xml" value="0.19739583333333333" />
+        <entry key="app/src/main/res/layout/picture_fragment.xml" value="0.1" />
         <entry key="app/src/main/res/layout/row_custom_recycler_item.xml" value="0.19739583333333333" />
         <entry key="app/src/main/res/layout/timeline_fragment.xml" value="0.33" />
         <entry key="app/src/main/res/layout/timeline_view_image_item.xml" value="0.19739583333333333" />
