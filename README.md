@@ -10,6 +10,8 @@ What it can do at the moment:
 
 ✓ Showing pictures and gifs from the media store or basically the pictures directory
 
+✓ See pictures swiping when in the fullscreen view
+
 ✓ Viewing the picture you select in fullscreen
 
 ✓ Autoplaying GIF
