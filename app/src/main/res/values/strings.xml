@@ -4,4 +4,5 @@
     <string name="albums_item">Albums</string>
     <string name="the_list_of_the_pictures_on_the_phone">the list of the pictures on the phone</string>
     <string name="this_is_the_picture_displayed">this is the picture displayed</string>
+    <string name="action_button">Options for the current picture</string>
 </resources>
