@@ -3,13 +3,6 @@ A simple gallery app for Android
 
 This app does not aim to be ultra useful or beautiful or to be the most feature rich, I just want to learn a little bit about Android development
 
-![photo_2022-01-22_12-54-10](https://user-images.githubusercontent.com/80849765/150649965-4bb4449b-f02e-41e6-97bd-5e5e97121632.jpg)
-
-
-
-![photo_2022-01-22_12-55-53](https://user-images.githubusercontent.com/80849765/150650044-640911f1-a655-4e64-8a3c-b46deff549d8.jpg)
-
-
 What it can do at the moment:
 
 ✓ Showing pictures and gifs from the media store or basically the pictures directory
@@ -23,3 +16,13 @@ What it can do at the moment:
 ✓ Autoplaying GIF
 
 ✓ Sorting by date descendant
+
+✓ Sharing a picture
+
+![photo_2022-01-30_18-09-23](https://user-images.githubusercontent.com/80849765/151721840-b0b8a3df-7b82-442b-85e3-59f85ea7aa98.jpg)
+
+
+![photo_2022-01-30_18-09-25](https://user-images.githubusercontent.com/80849765/151721842-3bd09890-1a05-4ed0-821a-55018586081b.jpg)
+
+
+![photo_2022-01-30_18-09-25 (2)](https://user-images.githubusercontent.com/80849765/151721846-314ef2db-f04b-491a-9ad4-676eb77a8786.jpg)
