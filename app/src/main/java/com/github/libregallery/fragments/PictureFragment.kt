@@ -49,4 +49,9 @@ class PictureFragment (picturePath : String): Fragment()
                 .into(imageView!!)
 
     }
+
+    fun getPath() : String ?
+    {
+        return picturePath
+    }
 }

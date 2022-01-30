@@ -1,14 +1,18 @@
 package com.github.libregallery.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.FileProvider
 import androidx.viewpager2.widget.ViewPager2
 import com.github.libregallery.R
 import com.github.libregallery.adapters.PicturePagerAdapter
+import com.github.libregallery.fragments.PictureFragment
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import java.io.File
 
 class PicturePagerActivity : AppCompatActivity()
 {
@@ -28,6 +32,7 @@ class PicturePagerActivity : AppCompatActivity()
     override fun onCreate(savedInstanceState: Bundle?)
     {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_picture_pager)
 
         initializeVariables()
@@ -36,8 +41,6 @@ class PicturePagerActivity : AppCompatActivity()
 
         setListeners()
     }
-
-
 
 
     private fun initializeVariables()
@@ -64,6 +67,33 @@ class PicturePagerActivity : AppCompatActivity()
     private fun setListeners()
     {
         menuButton?.setOnClickListener{onMenuButtonClicked()}
+        shareButton?.setOnClickListener{onShareButtonClicked()}
+    }
+
+    private fun onShareButtonClicked()
+    {
+        val currentItem = supportFragmentManager.findFragmentByTag("f"+viewPager?.currentItem) as PictureFragment
+
+        val picturePath = currentItem.getPath()!!
+
+        val uri = FileProvider.getUriForFile(this,"com.github.libregallery.fileProvider",
+            File(picturePath)
+        )
+
+        val share = Intent(Intent.ACTION_SEND)
+
+        share.type = "image/*"
+
+        share.putExtra(Intent.EXTRA_STREAM, uri)
+
+        share.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+
+        val chooser: Intent? = Intent.createChooser(share,"SharePicture")
+
+        chooser?.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+
+        applicationContext.startActivity(chooser)
+
     }
 
     private fun onMenuButtonClicked()
